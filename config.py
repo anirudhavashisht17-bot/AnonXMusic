@@ -18,7 +18,7 @@ class Config:
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
 
-        self.SESSION1 = getenv("SESSION", None)
+        self.SESSION1 = "BQAJVAcAP_htFsX9jiK5PfP2iCQFar8PEnYBUO0lGzOI7F5igJQ93WpCI9P_mWisJ7nym05lePkyG9WNaaJDx7-1RtteNhfbPWh129JqEhdos_1WAQfydA0NYXH9qZWuHSKpI3TDAS0ZbHD7B_2X5b3fVo23GJEeIkzlEMfY0sEC2PufVztnnGEPtXWVvwiGl8mok18ffLnvLxhoEZF5KKYYBLovOE_UTGtCQHyZPhAd8BORoUd1u-44V1SFpW0-7PCnAsoCjLSzxQTXds0YmqJLtLo98gBx9feT4vUzcukcPgG6SnkCQUqAKMHZYJ4g8a8GmAFibp5htvzKATRU5hOX1QdPMwAAAAHxDZEzAA"
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 
@@ -42,10 +42,5 @@ class Config:
         self.START_IMG = getenv("START_IMG", "https://files.catbox.moe/zvziwk.jpg")
 
     def check(self):
-        missing = [
-            var
-            for var in ["API_ID", "API_HASH", "BOT_TOKEN", "MONGO_URL", "LOGGER_ID", "OWNER_ID", "SESSION1"]
-            if not getattr(self, var)
-        ]
-        if missing:
-            raise SystemExit(f"Missing required environment variables: {', '.join(missing)}")
+    pass
+    
